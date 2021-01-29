@@ -34,12 +34,13 @@ module.exports = {
     },
     "gatsby-plugin-postcss",
     {
-      resolve: "gatsby-plugin-root-import",
+      resolve: "gatsby-plugin-module-resolver",
       options: {
-        src: path.join(__dirname, "src"),
-        components: path.join(__dirname, "src/components"),
-        pages: path.join(__dirname, "src/pages"),
-        svg: path.join(__dirname, "static/images/svg"),
+        root: "./", // <- will be used as a root dir
+        aliases: {
+          components: "./src/components",
+          svg: "./static/images/svg",
+        },
       },
     },
     "gatsby-plugin-eslint",
