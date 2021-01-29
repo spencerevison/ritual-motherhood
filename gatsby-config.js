@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   siteMetadata: {
     title: "Ritual Motherhood",
@@ -32,12 +34,12 @@ module.exports = {
     },
     "gatsby-plugin-postcss",
     {
-      resolve: "gatsby-alias-imports",
+      resolve: "gatsby-plugin-root-import",
       options: {
-        aliases: {
-          components: `${__dirname}/src/components`,
-          svg: `${__dirname}/static/images/svg`,
-        },
+        src: path.join(__dirname, "src"),
+        components: path.join(__dirname, "src/components"),
+        pages: path.join(__dirname, "src/pages"),
+        svg: path.join(__dirname, "static/images/svg"),
       },
     },
     "gatsby-plugin-eslint",
