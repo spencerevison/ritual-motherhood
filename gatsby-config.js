@@ -35,9 +35,8 @@ module.exports = {
       resolve: "gatsby-alias-imports",
       options: {
         aliases: {
-          components: "src/components",
-          pages: "src/pages",
-          svg: "static/images/svg",
+          components: `${__dirname}/src/components`,
+          svg: `${__dirname}/static/images/svg`,
         },
       },
     },
