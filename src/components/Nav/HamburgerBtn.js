@@ -1,6 +1,6 @@
 import React from "react";
-import HamburgerClosed from "../../../static/images/svg/hamburger-closed.svg";
-import HamburgerOpen from "../../../static/images/svg/hamburger-open.svg";
+import HamburgerClosed from "svg/hamburger-closed.svg";
+import HamburgerOpen from "svg/hamburger-open.svg";
 
 export default function HamburgerBtn({ onClick, menuOpen }) {
   return (
