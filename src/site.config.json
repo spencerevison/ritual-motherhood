@@ -1,0 +1,28 @@
+{
+  "title": "Ritual Motherhood",
+  "description": "Bringing ritual to motherhood",
+  "baseurl": "https://www.ritualmotherhood.com/",
+  "ogimage": "",
+  "nav": [
+    {
+      "title": "Home",
+      "path": "/"
+    },
+    {
+      "title": "About",
+      "path": "/about"
+    },
+    {
+      "title": "Musings",
+      "path": "/blog"
+    },
+    {
+      "title": "Offerings",
+      "path": "/offerings"
+    },
+    {
+      "title": "Get In Touch",
+      "path": "/contact"
+    }
+  ]
+}

@@ -2,19 +2,20 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "components/Layout";
 
-const AboutPage = ({ data: { page } }) => {
+const OfferingsPage = ({ data: { page } }) => {
   return (
     <Layout pageTitle={page.title}>
+      <div>{global.title}</div>
       <div dangerouslySetInnerHTML={{ __html: page.body }} />
     </Layout>
   );
 };
 
-export default AboutPage;
+export default OfferingsPage;
 
 export const query = graphql`
-  query AboutQuery {
-    page: datoCmsStandardPage(slug: { eq: "about" }, title: {}) {
+  query OfferingsQuery {
+    page: datoCmsStandardPage(slug: { eq: "offerings" }, title: {}) {
       title
       body
     }

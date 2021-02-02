@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 
-export default function NavItem({ url, label, isActive, isDesktop }) {
-  const NavItemStates = {
+export default function NavItem({ url, label, isDesktop }) {
+  const classes = {
+    base: "uppercase rounded-md px-3 py-2",
     active: "bg-gray-900 text-white",
     inactive: "text-gray-500 hover:bg-gray-500 hover:text-white",
     mobile: "block text-base",
@@ -12,12 +13,11 @@ export default function NavItem({ url, label, isActive, isDesktop }) {
   return (
     <Link
       to={url}
-      className="test"
       getProps={({ isCurrent }) => {
         return {
-          className: `rounded-md px-3 py-2 ${
-            isCurrent ? NavItemStates.active : NavItemStates.inactive
-          } ${isDesktop ? NavItemStates.desktop : NavItemStates.mobile}`,
+          className: `${classes.base} ${
+            isCurrent ? classes.active : classes.inactive
+          } ${isDesktop ? classes.desktop : classes.mobile}`,
         };
       }}
     >
